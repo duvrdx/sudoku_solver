@@ -35,7 +35,3 @@ class Table():
             return positions
 
         return None
-
-
-table = Table()
-print(table.get_positions(None))
