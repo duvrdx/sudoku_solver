@@ -1,11 +1,9 @@
 from Objects import *
 
 def main():
-    size = 3
+    size = 4
     table = Table(size)
-    table.create_table()
-    pattern = table.table
-
+    print(table.table)
 
 if __name__ == "__main__":
     main()
