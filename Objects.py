@@ -1,17 +1,9 @@
 class Table():
-    
-    table = [[[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]],
-             [[None, None, None],[None, None, None],[None, None, None]]]
     solved = False
+    table = None
 
-    def __init__(self):
+    def __init__(self, n):
+        self.size = n
         pass
 
     # position value was given in a tuple like
@@ -35,3 +27,16 @@ class Table():
             return positions
 
         return None
+
+    def create_table(self):
+        # Creating a grid
+        grid = [[]] * self.size
+        for line in grid:
+            line.append([0] * self.size)
+        
+        # Creating full table
+        self.table = [grid] * (self.size ** 2)
+    
+    def print_table(self):
+        # TEM QUE FAZER
+        pass
