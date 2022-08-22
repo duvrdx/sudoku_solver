@@ -34,7 +34,7 @@ def test_randnumbers(quantity):
     return {"title": f"Random Grid {quantity} filled numbers", "initial_table":initial_table, "final_table":table.table_to_string(), "solution_time":(final_time - initial_time)}
 
 def save_log(resolutions):
-    log = open(f"{datetime.datetime.now().strftime('%Y-%m-%d|%H:%M:%S')}.txt", 'a')
+    log = open(f"./logs/{datetime.datetime.now().strftime('%Y-%m-%d|%H:%M:%S')}.txt", 'a')
     for resolution in resolutions:
         log.write(f"Resolution - {resolution['title']} \nInitial table:\n\n")
         log.write(resolution["initial_table"])
